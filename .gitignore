@@ -1,5 +1,10 @@
 .venv/
 .idea/
+
 .env
+
 web/db.sqlite3
+
 web/web/__pycache__/
+web/users/__pycache__/
+web/calendars/__pycache__/
