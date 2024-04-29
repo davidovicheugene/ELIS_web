@@ -19,8 +19,8 @@ class ImpUser(AbstractUser):
     private_email = models.EmailField(max_length=250, blank=False, verbose_name="Основная электронная почта")
     operation_email = models.EmailField(max_length=250, blank=True, verbose_name="Операционная электронная почта")
     phone_number = models.CharField(max_length=15, blank=True, unique=True, verbose_name="Номер телефона")
-    add_phone_number = models.CharField(max_length=15, blank=True, unique=True, verbose_name="Дополнительный номер"
-                                                                                             "телефона")
+    add_phone_number = models.CharField(max_length=15, blank=True, unique=True,
+                                        verbose_name="Дополнительный номер телефона")
     gender = models.CharField(max_length=1, choices=USER_GENDER, blank=False, verbose_name="Пол")
     profile_image = models.ImageField(upload_to="media/uploads/users/avatars/", blank=True, verbose_name="Фото профиля")
     balance_accounts = models.ManyToManyField("finances.ImpBalance", blank=True, verbose_name="Счета")
