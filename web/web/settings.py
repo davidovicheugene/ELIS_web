@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users',
     'calendars',
-    'finances'
+    'finances',
+    'assistance'
 ]
 
 MIDDLEWARE = [
@@ -61,7 +62,11 @@ ROOT_URLCONF = 'web.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates',
+            BASE_DIR / 'templates' / 'users',
+            BASE_DIR / 'templates' / 'assistance',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
