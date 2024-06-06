@@ -1,9 +1,5 @@
-{% if request.user.is_authenticated %}
-  <p>{{ request.user.username }}</p>
-  <a href="{% url 'user_logout' %}">Выйти</a>
-{% else %}
-  <a href="{% url 'user_login' %}">Войти</a>
-  <a href="{% url 'user_signup' %}">Регистрация</a>
-{% endif %}
-
-<h1>Добро пожаловать!</h1>
+{%extends 'base_wrapper.html'%}
+{% load static %}
+{%block content%}
+  <h1>Главная страница</h1>
+{%endblock%}
