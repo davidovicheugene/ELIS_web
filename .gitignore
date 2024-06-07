@@ -5,6 +5,7 @@
 
 web/db.sqlite3
 web/media/*
+web/static/styles/prepros.config
 
 web/web/__pycache__/
 web/users/__pycache__/

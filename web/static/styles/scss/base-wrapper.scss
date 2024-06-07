@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap');
+
+$base-font: "Sofia Sans", sans-serif;
+// -----------------------------------
+$base-header-background-color: #040404;
+$base-background-color: #0d0d0d;
+$base-red-light-color: #ec4958;
+$base-red-dark-color: #D93849;
+
+.grey {
+    color: grey;
+}
+
+* {
+    margin:0px;
+    padding:0px
+}
+
+body {
+    color: white;
+    background: $base-background-color;
+    font-family: $base-font;
+
+    a {
+        text-decoration: none;
+        color: $base-red-dark-color;
+    }
+
+    .wrapper_container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .header {
+            background: $base-header-background-color;
+            width: 100%;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+
+            .header_left_block,
+            .header_right_block {
+                display: flex;
+                padding: 0px 10px;
+            }
+
+            #header_menu_btn {
+                background-color: transparent;
+                border: 1px solid $base-red-dark-color;
+                border-radius: 6px;
+                outline: none;
+                padding: 2px 4px 0px 4px;
+                margin-top: 9px;
+                margin-right: 10px;
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+
+            .header_icon {
+                width: 50px;
+                height: 50px;
+                padding-top: 4px;
+
+                #header_icon_item {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+
+
+            .header_auth_div {
+                display: flex;
+
+                .header_profile_div {
+                    display: flex;
+                    .header_username { margin-right: 10px;}
+                }
+            }
+
+        }
+    }
+
+    .content_container {
+        width: 100%;
+        height: 96vh;
+    }
+
+    footer {
+        /*TBD*/
+        height: 150px;
+        width: 100%;
+        background: $base-header-background-color;
+        p {
+            margin: 30px 50px;
+        }
+    }
+}
