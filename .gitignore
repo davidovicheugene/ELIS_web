@@ -12,8 +12,10 @@ web/users/__pycache__/
 web/calendars/__pycache__/
 web/finances/__pycache__/
 web/assistance/__pycache__/
+web/todo/__pycache__/
 
 web/calendars/migrations/*
 web/finances/migrations/*
 web/users/migrations/*
 web/assistance/migrations/*
+web/todo/migrations/*

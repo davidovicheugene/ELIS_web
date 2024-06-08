@@ -45,6 +45,7 @@ body {
             .header_left_block,
             .header_right_block {
                 display: flex;
+                align-items: center;
                 padding: 0px 10px;
             }
 
@@ -54,8 +55,7 @@ body {
                 border-radius: 6px;
                 outline: none;
                 padding: 2px 4px 0px 4px;
-                margin-top: 9px;
-                margin-right: 10px;
+                margin-right: 20px;
 
                 img {
                     width: 30px;
@@ -72,6 +72,19 @@ body {
                     width: 50px;
                     height: 50px;
                 }
+            }
+
+            .service_name_div {
+                 margin: 3px 0px 0px 30px;
+                 height: 32px;
+                 display: flex;
+                 align-items: center;
+
+                 .service_name {
+                    font-weight: 300;
+                    font-size: 32px;
+                    color: $base-red-dark-color;
+                 }
             }
 
 

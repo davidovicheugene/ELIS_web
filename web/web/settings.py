@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'users',
     'calendars',
     'finances',
+    'todo',
     'assistance'
 ]
 
@@ -67,6 +68,7 @@ TEMPLATES = [
             BASE_DIR / 'templates' / 'users',
             BASE_DIR / 'templates' / 'assistance',
             BASE_DIR / 'templates' / 'base',
+            BASE_DIR / 'templates' / 'todo',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
