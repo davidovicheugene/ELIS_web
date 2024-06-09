@@ -7,7 +7,9 @@
     <div class="container-75">
         <div class="yr_spaces_todo">
             <h1 id="your_spaces_todo_h1">Ваши пространства задач</h1>
-            <a href="{%url 'todo_add_space'%}"><img src="{%static 'img/icons/base/add_icon_red.svg'%}" alt="Создать пространство"></a>
+            <a href="{%url 'todo_add_space'%}">
+                <img src="{%static 'img/icons/base/add_icon_red.svg'%}" alt="Создать пространство">
+            </a>
         </div>
         {%if todo_spaces%}
             {%for space in todo_spaces %}
