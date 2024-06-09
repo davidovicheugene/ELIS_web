@@ -1,3 +1,4 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, reverse
 from django.urls import reverse_lazy
 from django.views.generic import TemplateView, ListView, CreateView
@@ -47,6 +48,12 @@ class TodoAddSpace(CreateView):
         form.instance.user = self.request.user
         messages.success(self.request, "Пространство было успешно создано!")
         return super(TodoAddSpace, self).form_valid(form)
+
+
+def delete_space(request, space_id):
+    space = TodoSpace.objects.get(pk=space_id)
+    space.delete()
+    return HttpResponseRedirect(reverse('todo_homepage'))
 
 
 class TodoAddTable(CreateView):
