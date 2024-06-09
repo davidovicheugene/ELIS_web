@@ -1,0 +1,43 @@
+{%extends 'base_wrapper.html'%}
+{% load static %}
+{%block add_links%}
+    <link rel="stylesheet" href="{%static 'styles/css/todo-add-space.css'%}">
+{%endblock%}
+{%block content%}
+    <div class="container-75">
+        <h1 id="your_spaces_todo_h1">Создайте доску</h1>
+        <p class="space_desc">Улучшайте организацию задач: благодаря возможности создавать несколько досок вы можете лучше структурировать их взависимости от принадлежности.</p>
+        <div class="space_creation_block container-75">
+            <form method="post" novalidate class="card">
+                {%csrf_token %}
+                {% for field in form %}
+                    {% if field.name == 'completed' %}
+                        <div class="field">
+                            <p>
+                                {{ field.label_tag }}
+                                {{ field }}
+                            </p>
+                            {% if field.errors %}
+                                <small class="error">{{ field.errors|striptags}}</small>
+                            {% endif %}
+                        </div>
+
+                    {% else %}
+                        <div class="field">
+                            {{ field.label_tag }}
+                            {{ field }}
+                        </div>
+                        {% if field.errors %}
+                            <small class="error">{{ field.errors|striptags}}</small>
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+
+                <div class="form-buttons">
+                    <input type="submit" value="Создать" class="btn"/>
+                    <a href="{%url 'todo_homepage'%}" class="btn">Отмена</a>
+                </div>
+	        </form>
+        </div>
+    </div>
+{%endblock%}

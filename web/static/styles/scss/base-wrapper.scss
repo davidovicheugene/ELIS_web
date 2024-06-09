@@ -1,11 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap');
-
-$base-font: "Sofia Sans", sans-serif;
-// -----------------------------------
-$base-header-background-color: #040404;
-$base-background-color: #0d0d0d;
-$base-red-light-color: #ec4958;
-$base-red-dark-color: #D93849;
+@use 'base-vars';
 
 .grey {
     color: grey;
@@ -18,12 +11,12 @@ $base-red-dark-color: #D93849;
 
 body {
     color: white;
-    background: $base-background-color;
-    font-family: $base-font;
+    background: base-vars.$base-background-color;
+    font-family: base-vars.$base-font;
 
     a {
         text-decoration: none;
-        color: $base-red-dark-color;
+        color: base-vars.$base-red-dark-color;
     }
 
     .wrapper_container {
@@ -33,7 +26,7 @@ body {
         flex-direction: column;
 
         .header {
-            background: $base-header-background-color;
+            background: base-vars.$base-header-background-color;
             width: 100%;
             height: 56px;
             display: flex;
@@ -51,7 +44,7 @@ body {
 
             #header_menu_btn {
                 background-color: transparent;
-                border: 1px solid $base-red-dark-color;
+                border: 1px solid base-vars.$base-red-dark-color;
                 border-radius: 6px;
                 outline: none;
                 padding: 2px 4px 0px 4px;
@@ -75,15 +68,15 @@ body {
             }
 
             .service_name_div {
-                 margin: 3px 0px 0px 30px;
+                 margin: 3px 0px 0px 20px;
                  height: 32px;
                  display: flex;
                  align-items: center;
 
                  .service_name {
-                    font-weight: 300;
+                    font-weight: 600;
                     font-size: 32px;
-                    color: $base-red-dark-color;
+                    color: base-vars.$base-red-dark-color;
                  }
             }
 
@@ -109,7 +102,7 @@ body {
         /*TBD*/
         height: 150px;
         width: 100%;
-        background: $base-header-background-color;
+        background: base-vars.$base-header-background-color;
         p {
             margin: 30px 50px;
         }

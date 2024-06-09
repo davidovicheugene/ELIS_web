@@ -1,5 +1,78 @@
 {%extends 'base_wrapper.html'%}
 {% load static %}
+{%block add_links%}
+<link rel="stylesheet" href="{%static 'styles/css/base-todo.css'%}" xmlns="http://www.w3.org/1999/html">
+{%endblock%}
 {%block content%}
-  <h1>Todo Homepage</h1>
+    <div class="container-75">
+      <h1 id="your_spaces_todo_h1">Ваши пространства задач</h1>
+        {%if todo_spaces%}
+            {%for space in todo_spaces %}
+                <div class="space_list_item">
+                    <div class="space_high_tab">
+                        <div class="space_info">
+                            <div class="space_logo_div">
+                                {%if space.logo%}
+                                    <img class="space_logo" src="{{space.logo.url}}" alt="Space logo">
+                                {%else%}
+                                    <img class="space_logo" src="{%static 'img/icons/base/no-image.svg'%}" alt="Space logo">
+                                {%endif%}
+                            </div>
+                            <div class="space_text">
+                                <span class="space_name">{{space.title|truncatechars:180}}</span>
+                                <span class="space_desc">{{space.description|truncatechars:180}}</span>
+                            </div>
+                        </div>
+                        <div class="space_btns">
+                            <a href="#" class="space_btn_a">
+                                <div class="space_btn space_boards">
+                                    <span>Доски</span>
+                                </div>
+                            </a>
+                            <a href="#" class="space_btn_a">
+                                <div class="space_btn space_members">
+                                    <span>Участники</span>
+                                </div>
+                            </a>
+                            <a href="#" class="space_btn_a">
+                                <div class="space_btn space_settings">
+                                    <span>Настройки</span>
+                                </div>
+                            </a>
+                            <a href="#" class="space_btn_a">
+                                <div class="space_btn space_delete">
+                                    <span>Удалить</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="space_low_tab">
+                        {%if space_tables%}
+                            {%for table in space_tables%}
+                                {%if table.related_space == space%}
+                                    <a class="add_space_big_a" href="#">
+                                        <div class="add_todo_space">
+                                            <p>{{table.title|truncatechars:20}}</p>
+                                        </div>
+                                    </a>
+                                {%endif%}
+                            {%endfor%}
+                        {%endif%}
+                        <a class="add_space_big_a" href="{%url 'todo_add_table' related_space_id=space.pk%}">
+                            <div class="add_todo_space">
+                                <p>Создать доску</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            {%endfor%}
+        {%else%}
+        <a class="add_space_big_a" href="{%url 'todo_add_space'%}">
+            <div class="add_todo_space">
+                <p>Создать</p>
+                <p>пространство</p>
+            </div>
+        </a>
+        {%endif%}
+    </div>
 {%endblock%}

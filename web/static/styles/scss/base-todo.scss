@@ -1,0 +1,137 @@
+@use 'base-vars';
+
+.container-75 {
+    margin: 0 auto;
+    height: 100%;
+    width: 75%;
+}
+
+#your_spaces_todo_h1 {
+    margin-top: 20px;
+    color: base-vars.$base-red-dark-color;
+}
+
+.add_space_big_a {
+    margin: 20px 9px 0 0;
+    display: flex;
+    width: 245px;
+    height: 100px;
+
+    .add_todo_space {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid base-vars.$base-red-dark-color;
+        width: 100%;
+        height: 100%;
+
+        p {
+            color: base-vars.$base-red-dark-color;
+            font-size: 20px;
+            font-family: base-vars.$base-font;
+        }
+        .add_space_icon {
+            width: 50px;
+        }
+    }
+}
+
+.add_space_big_btn:active {
+    background: base-vars.$base-red-dark-color;
+    p {
+        color: white;
+    }
+}
+
+.space_list_item {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .space_high_tab {
+        height: 40px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .space_info {
+            display: flex;
+            flex-direction: row;
+
+            .space_text {
+                margin-left: 10px;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+
+                .space_name {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+                .space_desc {
+                    color: base-vars.$base-grey_light-color;
+                }
+            }
+
+            .space_logo_div {
+                width: 40px;
+                height: 40px;
+                border-radius: 10px;
+
+                .space_logo {
+                    height: 40px;
+                    width: 40px;
+                }
+            }
+
+        }
+
+        .space_btns {
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+
+            .space_btn_a {
+                display: flex;
+                height: 100%;
+                width: 110px;
+                margin-left: 10px;
+            }
+
+            .space_btn {
+                border: 2px solid base-vars.$base-grey_light-color;
+                border-radius: 6px;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                span {
+                    color: base-vars.$base-grey_light-color;
+                    font-size: 18px;
+                }
+            }
+
+            .space_delete {
+                border: 2px solid base-vars.$base-red-dark-color;
+                span {
+                    color: base-vars.$base-red-dark-color;
+                    font-weight: 800;
+                }
+            }
+        }
+    }
+
+    .space_low_tab {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}

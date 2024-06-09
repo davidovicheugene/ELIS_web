@@ -1,0 +1,29 @@
+@use 'base-todo';
+
+.container-75 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p, h1 {
+        width: 650px;
+    }
+
+    .space_creation_block {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .space_desc {
+        margin: 20px 0;
+        font-size: 24px;
+    }
+
+    .form-buttons {
+        margin-top: 20px;
+        a {
+            font-size: 20px;
+            margin-left: 5px;
+        }
+    }
+}

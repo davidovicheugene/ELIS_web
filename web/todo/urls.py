@@ -3,5 +3,6 @@ from .views import *
 
 urlpatterns = [
     path('', TodoHomepage.as_view(), name="todo_homepage"),
-
+    path('add_space/', TodoAddSpace.as_view(), name="todo_add_space"),
+    path('add_table/<int:related_space_id>', TodoAddTable.as_view(), name="todo_add_table"),
 ]

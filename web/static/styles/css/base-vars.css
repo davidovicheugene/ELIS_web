@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap");
+.btn {
+  outline: none;
+  background: transparent;
+  padding: 2px 5px;
+  border: 2px solid #D93849;
+  border-radius: 5px;
+  color: #D93849;
+}
+
+.field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.error {
+  font-style: italic;
+  color: #ec4958;
+  font-size: 14px;
+}
+
+input, textarea, input:focus, textarea:focus, input:focus:hover, textarea:focus:hover {
+  background: transparent;
+  outline: none;
+  border: 1px solid #D93849;
+  border-radius: 6px;
+  min-height: 30px;
+  color: white;
+  font-family: "Sofia Sans", sans-serif;
+  font-size: 20px;
+  resize: none;
+}
+
+/* SYSTEM CLASSES */
+.card {
+  width: 650px;
+}
+
+#file-upload-button {
+  background: transparent;
+  outline: none;
+  border: 1px solid #D93849;
+  border-radius: 6px;
+}
