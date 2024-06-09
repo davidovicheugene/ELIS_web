@@ -6,10 +6,24 @@
     width: 75%;
 }
 
-#your_spaces_todo_h1 {
+.yr_spaces_todo {
+    display: flex;
     margin-top: 20px;
-    color: base-vars.$base-red-dark-color;
+
+    #your_spaces_todo_h1 {
+        color: base-vars.$base-red-dark-color;
+        margin-right: 20px;
+    }
+
+    a > img {
+        width: 30px;
+        height: 30px;
+        border: 2px solid base-vars.$base-red-dark-color;
+        border-radius: 6px;
+        margin-top: 3px;
+    }
 }
+
 
 .add_space_big_a {
     margin: 20px 9px 0 0;

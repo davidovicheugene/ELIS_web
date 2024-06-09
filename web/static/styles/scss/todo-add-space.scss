@@ -1,9 +1,10 @@
-@use 'base-todo';
+@use 'base-vars';
 
 .container-75 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 30px;
 
     p, h1 {
         width: 650px;
@@ -17,6 +18,7 @@
     .space_desc {
         margin: 20px 0;
         font-size: 24px;
+        color: base-vars.$base-grey-light-color;
     }
 
     .form-buttons {
