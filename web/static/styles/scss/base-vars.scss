@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap');
 
 $base-font: "Sofia Sans", sans-serif;
+//------------------------------------
+$heading-font-size: 20px;
+$h1-service-font-size: 32px;
 // -----------------------------------
 $base-header-background-color: #040404;
 $base-background-color: #0d0d0d;
@@ -8,6 +11,9 @@ $base-red-light-color: #ec4958;
 $base-red-dark-color: #D93849;
 $base-grey-light-color: #d0d0d0;
 
+* {
+    font-family: $base-font;
+}
 
 .btn {
     outline: none;
@@ -43,6 +49,13 @@ input, textarea, input:focus, textarea:focus, input:focus:hover, textarea:focus:
     resize: none;
 }
 
+
+/* CONTAINERS*/
+.container-75 {
+    margin: 0 auto;
+    height: 100%;
+    width: 75%;
+}
 
 /* SYSTEM CLASSES */
 .card {

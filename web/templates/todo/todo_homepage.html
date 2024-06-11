@@ -55,7 +55,7 @@
                         {%if space_tables%}
                             {%for table in space_tables%}
                                 {%if table.related_space == space%}
-                                    <a class="add_space_big_a" href="#">
+                                    <a class="add_space_big_a" href="{%url 'todo_table_info' pk=table.pk%}">
                                         <div class="add_todo_space">
                                             <p>{{table.title|truncatechars:20}}</p>
                                         </div>

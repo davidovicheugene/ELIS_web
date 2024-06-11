@@ -22,6 +22,9 @@ class TodoTable(models.Model):
 #     TODO:background
 #     TODO:admin
 
+    def __str__(self):
+        return f"{self.title}"
+
 
 class TodoList(models.Model):
     title = models.CharField(max_length=50, verbose_name="Название")
@@ -29,12 +32,16 @@ class TodoList(models.Model):
     user = models.ForeignKey('users.ImpUser', on_delete=models.CASCADE, verbose_name="Создатель")
     tasks_count = models.IntegerField(default=0, verbose_name="Кол-во задач")
 
+    def __str__(self):
+        return f"{self.title} | {self.user.username}"
+
 
 class TodoTask(models.Model):
     title = models.CharField(max_length=50, verbose_name="Название")
     description = models.TextField(max_length=10000, blank=True, verbose_name="Описание")
     label = models.CharField(max_length=20, blank=True, verbose_name="Метка")
     related_list = models.ForeignKey(TodoList, on_delete=models.CASCADE, verbose_name="Список")
+    related_table = models.ForeignKey(TodoTable, on_delete=models.CASCADE, verbose_name="Доска")
     user = models.ForeignKey('users.ImpUser', on_delete=models.CASCADE, verbose_name="Создатель")
 
 

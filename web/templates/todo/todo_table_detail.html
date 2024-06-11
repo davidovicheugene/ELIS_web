@@ -1,0 +1,81 @@
+{%extends 'base_wrapper.html'%}
+{% load static %}
+{%block add_links%}
+<link rel="stylesheet" href="{%static 'styles/css/todo-table-detail.css'%}" xmlns="http://www.w3.org/1999/html">
+<!--<script src="{% static 'js/todo_scripts.js'%}"></script>-->
+{%endblock%}
+{%block content%}
+  <div class="container-75">
+    <div class="table_header">
+      <div class="table_info">
+        <span class="table_name">{{table.title|truncatechars:180}}</span>
+      </div>
+      <div class="table_btns">
+        <a href="#" class="table_btn_a">
+          <div class="table_btn table_boards">
+            <span>Информация</span>
+          </div>
+        </a>
+        <a href="#" class="table_btn_a">
+          <div class="table_btn table_members">
+            <span>Участники</span>
+          </div>
+        </a>
+        <a href="#" class="table_btn_a">
+          <div class="table_btn table_settings">
+            <span>Настройки</span>
+          </div>
+        </a>
+        <a href="{%url 'todo_del_table' pk=table.pk%}" class="table_btn_a">
+          <div class="table_btn table_delete">
+            <span>Удалить</span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="todo_lists_container" id="todo_lists_cont_div">
+      {%if lists%}
+        {%for list in lists%}
+          <div class="todo_list_block">
+            <div class="list_info">
+              <div class="list_name">
+                <span>{{list.title}}</span>
+              </div>
+              <div class="list_settings">
+                <img class="list_settings_img" src="{%static 'img/icons/base/3_dots_red.svg'%}" alt="Параметры списка">
+              </div>
+            </div>
+            <div class="list_tasks">
+              {%for task in tasks%}
+                {%if task.related_list == list%}
+                  <div class="task_block">
+                    <div class="task_label">
+
+                    </div>
+                    <div class="task_title">
+                      {{task.title}}
+                    </div>
+                  </div>
+                {%endif%}
+              {%endfor%}
+              <div class="task_block">
+                <a href="{%url 'todo_add_task' pk=list.pk%}" class="add_task_a">
+                  <img class="add_task_img" src="{%static 'img/icons/base/add_icon_red.svg'%}" alt="Добавить задачу">
+                  <span class="add_task_span">Добавить задачу</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        {%endfor%}
+      {%endif%}
+      {%block add_list%}
+        <div class="todo_list_block_add" id="todo_add_list_btn">
+          <a href="{%url 'todo_add_list' pk=table.pk%}" class="add_list_a">
+            <img class="add_list_img" src="{%static 'img/icons/base/add_icon_red.svg'%}" alt="Добавить список">
+            <span class="add_list_span">Добавить список</span>
+          </a>
+        </div>
+      {%endblock%}
+    </div>
+  </div>
+{%endblock%}

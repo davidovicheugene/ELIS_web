@@ -1,0 +1,361 @@
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap");
+* {
+  font-family: "Sofia Sans", sans-serif;
+}
+
+.btn {
+  outline: none;
+  background: transparent;
+  padding: 2px 5px;
+  border: 2px solid #D93849;
+  border-radius: 5px;
+  color: #D93849;
+}
+
+.field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.error {
+  font-style: italic;
+  color: #ec4958;
+  font-size: 14px;
+}
+
+input, textarea, input:focus, textarea:focus, input:focus:hover, textarea:focus:hover {
+  background: transparent;
+  outline: none;
+  border: 1px solid #D93849;
+  border-radius: 6px;
+  min-height: 30px;
+  color: white;
+  font-family: "Sofia Sans", sans-serif;
+  font-size: 20px;
+  resize: none;
+}
+
+/* CONTAINERS*/
+.container-75 {
+  margin: 0 auto;
+  height: 100%;
+  width: 75%;
+}
+
+/* SYSTEM CLASSES */
+.card {
+  width: 650px;
+}
+
+#file-upload-button {
+  background: transparent;
+  outline: none;
+  border: 1px solid #D93849;
+  border-radius: 6px;
+}
+
+.table_header {
+  width: 100%;
+  height: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-bottom: 2px solid #D93849;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.table_header .table_info {
+  width: 50%;
+  margin-left: 10px;
+}
+.table_header .table_info .table_name {
+  font-size: 32px;
+  font-weight: bold;
+}
+.table_header .table_btns {
+  height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10px;
+}
+.table_header .table_btns .table_btn_a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 115px;
+  margin-left: 10px;
+}
+.table_header .table_btns .table_btn {
+  border: 2px solid #d0d0d0;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.table_header .table_btns .table_btn span {
+  color: #d0d0d0;
+  font-size: 18px;
+}
+.table_header .table_btns .table_delete {
+  border: 2px solid #D93849;
+}
+.table_header .table_btns .table_delete span {
+  color: #D93849;
+  font-weight: 800;
+}
+
+.todo_lists_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+.todo_lists_container .todo_list_block_add {
+  border: 2px solid #D93849;
+  border-radius: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+  width: 340px;
+  margin-top: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.todo_lists_container .todo_list_block_add .add_list_a {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+.todo_lists_container .todo_list_block_add .add_list_a .add_list_span {
+  color: #D93849;
+}
+.todo_lists_container .todo_list_block {
+  border: 2px solid #D93849;
+  border-radius: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 340px;
+  height: auto;
+  padding: 5px 5px;
+  margin: 10px 10px 5px 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.todo_lists_container .todo_list_block .list_info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 5px;
+}
+.todo_lists_container .todo_list_block .list_info .list_name {
+  width: 90%;
+}
+.todo_lists_container .todo_list_block .list_info .list_name span {
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #d0d0d0;
+}
+.todo_lists_container .todo_list_block .list_info .list_settings {
+  width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.todo_lists_container .todo_list_block .list_info .list_settings .list_settings_img {
+  width: 25px;
+}
+.todo_lists_container .todo_list_block .add_task_a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.todo_lists_container .todo_list_block .add_task_a .add_list_img {
+  margin-right: 10px;
+}
+.todo_lists_container .todo_list_block .add_task_a .add_list_span {
+  color: #D93849;
+  font-size: 20px;
+}
+.todo_lists_container .todo_list_block .list_tasks {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.todo_lists_container .todo_list_block .list_tasks .task_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 97%;
+  min-height: 45px;
+  margin-bottom: 7px;
+  padding-left: 10px;
+  border-radius: 6px;
+  background-color: #262626;
+}
+.todo_lists_container .todo_list_block .list_tasks .task_block .task_label {
+  height: 5%;
+}
+.todo_lists_container .todo_list_block .list_tasks .task_block task.title {
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.todo_lists_container .todo_add_list_div {
+  border: 2px solid #D93849;
+  border-radius: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 340px;
+  height: 100px;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+.todo_lists_container .todo_add_list_div .todo_add_list_high_div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 5px;
+}
+.todo_lists_container .todo_add_list_div .todo_add_list_high_div .todo_add_list_input {
+  width: 90%;
+  height: 40px;
+  padding: 0 10px;
+}
+.todo_lists_container .todo_add_list_div .todo_add_list_low_div {
+  width: 96%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 15px;
+}
+.todo_lists_container .todo_add_list_div .todo_add_list_low_div .todo_add_list_btn {
+  width: 200px;
+  background-color: transparent;
+  border: 1px solid #D93849;
+  border-radius: 6px;
+  color: #D93849;
+  height: 30px;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.todo_lists_container .todo_add_list_div .todo_add_list_low_div .todo_add_list_cancel_btn {
+  width: 100px;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid #D93849;
+  border-radius: 6px;
+  color: #D93849;
+  height: 30px;
+  font-weight: bold;
+  font-size: 16px;
+}

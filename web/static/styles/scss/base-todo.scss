@@ -1,11 +1,5 @@
 @use 'base-vars';
 
-.container-75 {
-    margin: 0 auto;
-    height: 100%;
-    width: 75%;
-}
-
 .yr_spaces_todo {
     display: flex;
     margin-top: 20px;
@@ -43,7 +37,7 @@
 
         p {
             color: base-vars.$base-red-dark-color;
-            font-size: 20px;
+            font-size: base-vars.$heading-font-size;
             font-family: base-vars.$base-font;
         }
         .add_space_icon {
@@ -84,7 +78,7 @@
                 flex-direction: column;
 
                 .space_name {
-                    font-size: 20px;
+                    font-size: base-vars.$heading-font-size;
                     font-weight: bold;
                 }
                 .space_desc {

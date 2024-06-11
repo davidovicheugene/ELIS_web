@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap");
+* {
+  font-family: "Sofia Sans", sans-serif;
+}
+
 .btn {
   outline: none;
   background: transparent;
@@ -36,6 +40,13 @@ input, textarea, input:focus, textarea:focus, input:focus:hover, textarea:focus:
   font-family: "Sofia Sans", sans-serif;
   font-size: 20px;
   resize: none;
+}
+
+/* CONTAINERS*/
+.container-75 {
+  margin: 0 auto;
+  height: 100%;
+  width: 75%;
 }
 
 /* SYSTEM CLASSES */
